@@ -44,17 +44,19 @@ class LinkedListTest < MiniTest::Unit::TestCase
     assert_equal false, lli.last?
   end
 
+  def test_05b_comparator_equal_to
+    lli1 = LinkedListItem.new("foo")
+    lli2 = LinkedListItem.new("foo")
+    assert lli1 == lli2
+  end
+
   def test_05a_comparator_greater_than
     lli1 = LinkedListItem.new("foo")
     lli2 = LinkedListItem.new("bar")
     assert lli1 > lli2
   end
 
-  def test_05b_comparator_equal_to
-    lli1 = LinkedListItem.new("foo")
-    lli2 = LinkedListItem.new("foo")
-    assert lli1 == lli2
-  end
+
 
   def test_05c_comparator_lesser_than
     lli1 = LinkedListItem.new("foo")
